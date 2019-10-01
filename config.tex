@@ -1,0 +1,34 @@
+\usepackage[utf8x]{inputenc}    % *nix / Linux / MacOSX
+%\usepackage[latin1]{inputenc}  % Windows (MacOSX)
+\usepackage{cite}
+\newcommand{\TheTitle}{%
+    TÍTULO DE MEMORIA
+}%
+\newcommand{\TheAuthor}          {RODRIGO ARMANDO QUEZADA LASTRA}
+\newcommand{\TheGrade}           {Magíster en Gestión de Tecnologías de Información y Telecomunicaciones} % Elegir "O" ó "A"
+\newcommand{\TheCity}            {SANTIAGO}
+\newcommand{\TheDate}            {OCTUBRE 2019}
+\newcommand{\TheAdvisor}         {SR. XXXXXXX XXXXXXXX X.}
+\newcommand{\TheCoAdvisor}       {SR. XXXXXXX XXXXXXXX X.}
+%\newcommand{\TheScndCoAdvisor}   {SRTA. XXXXXXX XXXXXXXX X.} % Opcional
+
+% Marca de agua, puede ser deshabilitada para impresión rápida
+%\insertWatermark{figures/logousm_watermark.jpg}
+
+\hypersetup{  
+    pdfinfo={  
+        Subject={Memoria postgrado, UNAB},
+        Keywords={Memoria} {Facultad de Ingeniería} {UNAB},
+        Producer={Rodrigo Armando Quezada Lastra},
+        Licence={},
+        pdfpagemode=FullScreen,
+        pdfmenubar=false,
+        pdftoolbar=false
+    }  
+}
+\hypersetup{  
+    pdfinfo={  
+        Title={\TheTitle},
+        Author={\TheAuthor}
+    }  
+}

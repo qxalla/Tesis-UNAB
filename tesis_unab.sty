@@ -1,0 +1,92 @@
+\ProvidesPackage{tesis_unab}[1/10/2019 UNAB Thesis Style Sheet]
+\typeout{UNAB Thesis Style}
+
+% Márgenes (UNAB)
+\RequirePackage{geometry}
+\geometry{verbose,tmargin=25mm,bmargin=25mm,lmargin=40mm,rmargin=25mm}
+
+% Numeración de las notas al pie según capítulo
+\RequirePackage{chngcntr}
+\counterwithout{footnote}{chapter}
+
+% Custom Colors
+\RequirePackage{xcolor}
+\definecolor{gray20}{gray}{0.20}
+\definecolor{gray50}{gray}{0.50}
+\definecolor{gray80}{gray}{0.80}
+
+
+%---------------------------------------------------------------------------
+%%% CAPTIONS
+\RequirePackage[font=small,labelfont=bf,justification=centering]{caption}  
+% Caption Fonts and Weight
+% You can try with the next line for multiple caption in a figure/table,
+% however remember it is incompatible with 'subfig'.
+%\RequirePackage{subcaption}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% HEADERS AND FOOTERS
+\fancyhf{}
+%\fancyhead[L]{\scriptsize \rightmark}
+%\fancyfoot[L]{\includegraphics[height=2.5mm]{logousm.png}{\small \hspace{2mm}Departamento de Industrias, Universidad Santa María}}
+
+\fancypagestyle{plain}{%
+	\fancyhf{} % clear all header and footer fields
+	\fancyhead[LE]{\scriptsize \leftmark}
+	\fancyhead[RE]{\scriptsize \rightmark}
+	\fancyhead[LO]{\scriptsize \rightmark}
+	\fancyhead[RO]{\scriptsize \leftmark}
+	\fancyfoot[RO]{\bfseries \thepage} % except the center
+	\fancyfoot[LO]{\includegraphics[height=3mm]{figures/logo-footer-ico.png}{\footnotesize\hsp[5]Universidad Andres Bello, Facultad de Ingeniría}}
+	\fancyfoot[RE]{{\footnotesize Universidad Andres Bello, Facultad de Ingenirías}\hsp[5]\includegraphics[height=4mm]{figures/logo-footer-ico.png}}
+	\fancyfoot[LE]{\bfseries \thepage} % except the center
+	\renewcommand{\headrulewidth}{0.1pt}
+	\renewcommand{\footrulewidth}{0.1pt}
+}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% FONTS
+%	Tipo de Letra (Times New Roman).
+\RequirePackage{txfonts}
+% En Línux, es posible que sea necesario reconstruir el mapa de fuentes.
+% Como administrador, puede ejecutar el siguiente comando:
+% # updmap-sys --enable Map=txfonts.map
+%
+% El tipo de letra debe ser ocupado después de las librerías matemáticas
+% pues contienen macros que son incompatibles con amsmath y amssymb.
+%
+% Alternativas:
+%\RequirePackage{times} 	% No recomendado (Deprecated!)
+% Forzar Times New Roman en fórmulas matemáticas (No recomendado!):
+%\RequirePackage{mathptmx}
+% Las siguientes lineas cambiarán el documento a Arial (La UTFSM no lo aprueba!).
+%\renewcommand{\rmdefault}{phv}		% Convert to Arial
+%\renewcommand{\sfdefault}{phv}		% Convert to Arial
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% CHAPTER HEADINGS
+\titleformat{\chapter}[hang]
+{\Huge\bfseries}
+{\thechapter\hsp\textcolor{gray80}{|}\hsp}{0pt}
+{\Huge\bfseries}
+
+\makeatletter		% IMPORTANT! (Do not delete or move!)
+
+
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+% Cambiar los Títulos (sólo en español (Chile))
+\addto{\captionsspanish}{\renewcommand{\contentsname}   {\'Indice de Contenidos}}
+\addto{\captionsspanish}{\renewcommand{\listfigurename} {\'Indice de Figuras}}
+\addto{\captionsspanish}{\renewcommand{\listtablename}	{\'Indice de Tablas}}
+\addto{\captionsspanish}{\renewcommand{\tablename}      {Tabla}}
+\addto{\captionsspanish}{\renewcommand{\appendixname}   {Anexo}}
+%---------------------------------------------------------------------------

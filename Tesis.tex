@@ -1,0 +1,67 @@
+\documentclass[
+	12pt,			% Tamaño de fuente (11pt)
+	letterpaper,	% Tamaño del papel (carta)
+]{tesis_unab}
+
+\usepackage{tesis_unab}   % Archivo de estilos 
+
+\input{config}              % Configuración (Título, autor, etc.)
+                            % Usted debe modificar este documento
+                            % para actualizar la portada.
+
+\makeatother                % Important! (Do not delete or move!)
+
+%---------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Documento
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\pagestyle{plain}           % Headers & Footers (Roman numbers)
+%---------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Portada
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\insertFile{portada}  
+
+\frontmatter     
+
+\dedicatoria{%
+    \emph{\huge A mi familia \dots}
+
+    \vspace*{2cm}[A la Gloria del Gran Arquitecto del Universo]
+}%
+
+\section*{AGRADECIMIENTOS}
+\insertFile[empty]{agradecimientos}
+
+\section*{RESUMEN EJECUTIVO}
+\insertFile[plain]{resumen}  
+
+%%% TABLA DE CONTENIDOS / FIGURAS / CUADROS
+\begin{spacing}{1}      % Single space for TOC, LOF and LOT
+    \tableofcontents\listoftables\listoffigures
+\end{spacing}
+
+%---------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Cuerpo Principal (Main Matter)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter             % Important! (Do not delete or move!)
+
+\pagestyle{fancy}       % Headers & Footers (Arabic numbers)
+
+% Incluir Capítulos
+\input{includes/capitulo01}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Bibliografía
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{spacing}{1}      % Single space for Bibliography
+\clearpage
+    %\bibliographystyle{tesis_unab}    % Alternative 'apalike'
+    \bibliographystyle{acm}
+    \bibliography{bibliography}         % Archivo 'bibliography.bib'
+\end{spacing}
+
+\end{document}
