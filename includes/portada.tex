@@ -1,4 +1,6 @@
 \begin{center}
+    \vspace{12mm}
+    \includegraphics[height=50mm]{figures/logo-portada.png}
 	\begin{spacing}{1}
 		{\large UNIVERSIDAD ANDRÉS BELLO}\\
 		FACULTAD DE INGENIERÍA\\
@@ -7,24 +9,33 @@
 
 	\vspace{12mm}
 
-	\includegraphics[height=50mm]{figures/logo-portada.png}
+	
 
     \thesisTitle{\TheTitle}
-    \thesisTitle{\TheAuthor}
-
-%	\vspace{12mm}
+    
+    \vspace{12mm}
+	
+	\begin{spacing}{1.25} 
+		Autor:\\
+		\TheAuthor
+	\end{spacing}
+	
+	%\thesisTitle{\TheAuthor}
+	\vspace{9mm}
 
 	\begin{spacing}{1.25} 
-		MEMORIA PARA OPTAR AL TÍTULO DE\\
+		TRABAJO DE TÍTULO PARA OPTAR AL GRADO DE:\\
 		\TheGrade
 	\end{spacing}
 
-	\vspace{15mm}
+	\vspace{9mm}
   \begin{table}[h]
     \begin{center}
     \begin{tabular}{ l c l }
     PROFESOR GUÍA & : & \TheAdvisor{}\\
+    \ifdefined\TheCoAdvisor
     PROFESOR CORREFERENTE & : & \TheCoAdvisor{}\\
+    \fi
     \ifdefined\TheScndCoAdvisor
     PROFESOR CORREFERENTE & : & \TheScndCoAdvisor{}
     \fi
