@@ -3,3 +3,48 @@
 \section{Introducción}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis tellus id elit viverra viverra \citep{adams1995hitchhiker}. Ut ac elit ac odio dapibus ultrices id at quam. Nulla facilisi. Integer in feugiat leo, et sodales lectus. Ut efficitur nulla elit, nec placerat ex congue faucibus. Nullam dapibus, tellus vel ultricies fringilla, velit velit tristique orci, eu fringilla massa mi vitae arcu. Phasellus sit amet sagittis dui. Nullam accumsan leo eu blandit imperdiet. Etiam auctor porttitor enim in sodales. Donec nulla dolor, egestas quis efficitur sit amet, aliquet a quam. Pellentesque non ligula sit amet nunc egestas auctor in at ex. Phasellus arcu sapien, vestibulum in molestie eu, pulvinar vitae enim. Curabitur et porttitor ligula, a consequat odio. Etiam varius ac velit vitae imperdiet \citep{Codishetal2000}.
+
+
+\subsubsection{Introducción nivel 2.}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis tellus id elit viverra viverra...
+
+\subsubsection{Introducción nivel 3.}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris venenatis tellus id elit viverra viverra...
+
+ejemplo de cita de figura \autoref{fig:figuraTag}).
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.7\textwidth]{figures/logo-portada.png}
+\caption[titulo en indice]{titulo que se muestra en la misma figura.\\
+{\scriptsize (Fuente: debe estar en apa v6)}}
+\label{fig:figuraTag}
+\end{figure}
+
+ejemplo de tabla:
+
+\begin{table}[h!]
+    \caption[Ejemplo: Tabla de Temperaturas]{Tabla de Temperaturas}
+    \label{tbl:temperaturas}
+    \begin{tabularx}{\linewidth}{@{} l  c  c  X @{}}
+        \toprule
+        \textbf{\textsc{Day}} &  \textbf{\textsc{Min Temp}} 
+        & \textbf{\textsc{Max Temp}} & \textbf{\textsc{Summary}}\\
+        \hline\hline
+        Monday & 11C & 22C & A clear day with lots of sunshine.
+        However, the strong breeze will bring down the temperatures. \\ \hline
+        Tuesday & 9C & 19C & Cloudy with rain, across many northern regions. Clear spells
+        across most of Scotland and Northern Ireland,
+        but rain reaching the far northwest. \\ \hline
+        Wednesday & 10C & 21C & Rain will still linger for the morning.
+        Conditions will improve by early afternoon and continue
+        throughout the evening. \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsubsection{diagrama ishikawa}
+para generar un diagrama de una forma mas sencilla pueden dibujarlo en https://www.mathcha.io/ luego cuando lo tengan listo ir a menu -> expor document to latex
+
+ejemplo:
+\input{includes/ishikawa.tex}
