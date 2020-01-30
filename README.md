@@ -15,6 +15,7 @@ La bibliografía está contenida en el archivo `bibliography.bib`, y los estilos
 **Nota:** Las normas APA requieren que todas las entradas bibliográficas (incluyendo **webpage**) tengan un año (*year*) definido. Si al compilar ve referencias extrañas en lugar de los nombres de los autores de artículos citados, entonces lo más probable es que tenga un problema con el año de una de sus referencias.
 
 **Recomendación:** Ocupe un editor bibliográfico como Mendeley o BibDesk.
+**Recomendación 2020:** utilicen un editor en linea para poder editar en cualquier parte, recomiendo https://www.overleaf.com/login al parecer a la fecha la UNAB no tiene aun convenio con este software pero si reconoce su correo de la universidad como parte de una red academica.
 
 ## Plataformas Soportadas
 
